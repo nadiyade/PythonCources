@@ -27,11 +27,11 @@ manage.py
 
 В данный момент нас интересует переменная `TEMPLATES`, выглядит примерно так:
 
-![](https://djangoalevel.s3.eu-central-1.amazonaws.com/templates_var.png)
+![](https://djangoalevel.s3.eu-central-1.amazonaws.com/lesson34/templates_var.png)
 
 В ключ `DIRS` добавим нашу папку с шаблонами, что бы получилось так:
 
-![](https://djangoalevel.s3.eu-central-1.amazonaws.com/templates_filled.png)
+![](https://djangoalevel.s3.eu-central-1.amazonaws.com/lesson34/templates_filled.png)
 
 Для применения любых изменений нужно перезапускать сервер (команда manage.py runserver из прошлого занятия)
 
@@ -81,7 +81,7 @@ def index(request):
 
 Перезапустим сервер, и увидим результат на главной странице `http://127.0.0.1:8000/`
 
-![](https://djangoalevel.s3.eu-central-1.amazonaws.com/render_template.png)
+![](https://djangoalevel.s3.eu-central-1.amazonaws.com/lesson34/render_template.png)
 
 Мы отрендерили шаблон! Но в нём нет никаких переданных данных, для передачи данных нужно в метод render добавить третий аргумент, в виде словаря.
 
@@ -171,7 +171,7 @@ def index(request):
 
 Обновим страницу и увидим.
 
-![](https://djangoalevel.s3.eu-central-1.amazonaws.com/render_variables.png)
+![](https://djangoalevel.s3.eu-central-1.amazonaws.com/lesson34/render_variables.png)
 
 ### Логические операторы и циклы
 
@@ -181,7 +181,7 @@ def index(request):
 
 #### Логические операторы
 
-В шаблонах можно оперировать не только переменніми но и не сложной логикой, такой как логические операторы и циклы.
+В шаблонах можно оперировать не только переменными но и не сложной логикой, такой как логические операторы и циклы.
 
 Давайте добавим в наши параметры переменную 'display_num' и назначим ей False
 
@@ -225,7 +225,7 @@ def index(request):
 
 Обновим страницу и увидим:
 
-![](https://djangoalevel.s3.eu-central-1.amazonaws.com/If_statement.png)
+![](https://djangoalevel.s3.eu-central-1.amazonaws.com/lesson34/If_statement.png)
 
 
 А если изменим только во view переменную с False на True:
@@ -247,7 +247,7 @@ def index(request):
 
 То увидим:
 
-![](https://djangoalevel.s3.eu-central-1.amazonaws.com/if_true.png)
+![](https://djangoalevel.s3.eu-central-1.amazonaws.com/lesson34/if_true.png)
 
 Т.к. переменная True, то мы видим значение переменной `my_num`
 
@@ -277,7 +277,7 @@ def index(request):
 
 Обновим страницу и увидим:
 
-![](https://djangoalevel.s3.eu-central-1.amazonaws.com/basic_for.png)
+![](https://djangoalevel.s3.eu-central-1.amazonaws.com/lesson34/basic_for.png)
 
 
 Еще раз, логика через `{% %}` , данные через `{{ }}` 
@@ -314,12 +314,12 @@ def index(request):
 
 Обновляем страницу и видим:
 
-![](https://djangoalevel.s3.eu-central-1.amazonaws.com/for_if.png) 
+![](https://djangoalevel.s3.eu-central-1.amazonaws.com/lesson34/for_if.png) 
 
 
 ## Встроенные темплейт теги.
 
-На самом деле все ключевые слова используемые внутри `{# #}` называются template tags, и их существует огромное множество.
+На самом деле все ключевые слова используемые внутри `{% %}` называются template tags, и их существует огромное множество.
 
 ![](http://memesmix.net/media/created/gmkbf5.jpg)
 
@@ -368,11 +368,11 @@ path('', first, name='first'),
 
 Наш индекс пейдж:
 
-![](https://djangoalevel.s3.eu-central-1.amazonaws.com/index_link.png)
+![](https://djangoalevel.s3.eu-central-1.amazonaws.com/lesson34/index_link.png)
 
 После клика:
 
-![](https://djangoalevel.s3.eu-central-1.amazonaws.com/first_link.png)
+![](https://djangoalevel.s3.eu-central-1.amazonaws.com/lesson34/first_link.png)
 
 ### Наследование шаблонов
 
@@ -444,11 +444,11 @@ def first(request):
 
 Индекс страница
 
-![](https://djangoalevel.s3.eu-central-1.amazonaws.com/extended_index.png)
+![](https://djangoalevel.s3.eu-central-1.amazonaws.com/lesson34/extended_index.png)
 
 Первая страница
 
-![](https://djangoalevel.s3.eu-central-1.amazonaws.com/extended_first.png)
+![](https://djangoalevel.s3.eu-central-1.amazonaws.com/lesson34/extended_first.png)
 
 
 Что произошло?
@@ -502,11 +502,11 @@ def first(request):
 
 index:
 
-![](https://djangoalevel.s3.eu-central-1.amazonaws.com/include_index.png)
+![](https://djangoalevel.s3.eu-central-1.amazonaws.com/lesson34/include_index.png)
 
 first:
 
-![](https://djangoalevel.s3.eu-central-1.amazonaws.com/include_first.png)
+![](https://djangoalevel.s3.eu-central-1.amazonaws.com/lesson34/include_first.png)
 
 
 В добавленную станицу можно передать переменные, при момощи тега `with`
@@ -533,11 +533,11 @@ first:
 
 index
 
-![](https://djangoalevel.s3.eu-central-1.amazonaws.com/include_var.png)
+![](https://djangoalevel.s3.eu-central-1.amazonaws.com/lesson34/include_var.png)
 
 first
 
-![](https://djangoalevel.s3.eu-central-1.amazonaws.com/include_non_var.png)
+![](https://djangoalevel.s3.eu-central-1.amazonaws.com/lesson34/include_non_var.png)
 
 
 В первом случае, мы видим добавленна переменная, во втором ничего так как мы ничего не передавали.
@@ -552,7 +552,7 @@ first
 
 Смотрим на first page
 
-![](https://djangoalevel.s3.eu-central-1.amazonaws.com/first_no_var.png)
+![](https://djangoalevel.s3.eu-central-1.amazonaws.com/lesson34/first_no_var.png)
 
 Переменной нет, срабатывает if
 
@@ -614,14 +614,25 @@ def index(request):
 
 смотрим на результат
 
-![](https://djangoalevel.s3.eu-central-1.amazonaws.com/filters.png)
+![](https://djangoalevel.s3.eu-central-1.amazonaws.com/lesson34/filters.png)
 
 Каждый фильтр имеет свои осбенности и правила написания, подробнее можно посмотреть по ссылке выше.
 
 
 ## Кастомные темплейт теги и фильтры
 
-На самом деле, стандартным набором дело не ограничивается и если нужно можно дописать свои теги и фильтры, но это мы рассмотрим в другой раз...
+На самом деле, стандартным набором дело не ограничивается и если нужно можно дописать свои теги и фильтры, и это мы рассмотрим в другой раз...
 
 ![](https://i.ytimg.com/vi/gF060AIFiB8/hqdefault.jpg)
 
+
+# Домашнее задание
+Создать базовую html от которой будут наследоваться все остальные
+
+Для статических урлов сделать наследующиеся от базового, но с разным текстом (можно и оформлением)
+
+Для динамических, выводить текст о том чётный введен или нечётный (логика в темплейтах), есди введён слаг, выводить его при помощи include в добавочной html (добавленной из отдельного файла).
+
+На главной странице (http://127.0.0.1:8000/) сделать две ссылки, перейти на случайную статью (id), и перейти на случайную статью со случайным слагом (5-10 случайных символов)
+
+На всех страницах внизу должна быть ссылка на главную.
